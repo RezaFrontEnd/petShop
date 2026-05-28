@@ -1,0 +1,27 @@
+@keyframes slideFromBottom {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* شروع از 20 پیکسل پایین‌تر */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* پایان در موقعیت اصلی */
+  }
+}
+
+/* اعمال انیمیشن به دکمه‌های prev و next */
+.swiper-button-prev,
+.swiper-button-next {
+  opacity: 0; /* ابتدا نامرئی هستند */
+  animation: slideFromBottom 0.5s ease-out forwards; /* مدت زمان 0.5 ثانیه، با انیمیشن ease-out و حفظ حالت نهایی */
+  animation-delay: 1s; /* تاخیر 1 ثانیه‌ای قبل از شروع انیمیشن */
+}
+
+/* برای دکمه prev، انیمیشن را کمی زودتر شروع می‌کنیم */
+.swiper-button-prev {
+  animation-delay: 0.8s; /* تاخیر کمتر برای دکمه قبلی */
+}
+
+/* اگر Swiper با loop کار کند، گاهی دکمه‌ها دوباره ظاهر می‌شوند */
+/* برای اطمینان از اینکه انیمیشن دوباره اعمال شود، می‌توانیم از کلاس‌های موقت استفاده کنیم */
+/* اما معمولا انیمیشن به طور خودکار دوباره اعمال می‌شود */
