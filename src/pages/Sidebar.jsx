@@ -1,6 +1,13 @@
-import React from 'react';
+import React from "react";
 
-const Sidebar = ({ menuClasses, setOpen, cartState, isFocused, setIsFocused,isActive}) => {
+const Sidebar = ({
+  menuClasses,
+  setOpen,
+  cartState,
+  isFocused,
+  setIsFocused,
+  isActive,
+}) => {
   return (
     <aside className={menuClasses}>
       {cartState === "empty" ? (
@@ -25,7 +32,9 @@ const Sidebar = ({ menuClasses, setOpen, cartState, isFocused, setIsFocused,isAc
             {!isFocused ? (
               <div className="relative">
                 <input
-                  onClick={() => { setIsFocused(true) }}
+                  onClick={() => {
+                    setIsFocused(true);
+                  }}
                   id="usernameInput"
                   type="text"
                   placeholder=" " // Placeholder is transparent, label handles visibility
@@ -61,12 +70,7 @@ const Sidebar = ({ menuClasses, setOpen, cartState, isFocused, setIsFocused,isAc
             )}
             <div className="space-y-4">
               {/* Input field for Username/Email/Phone */}
-
-
-
-
             </div>
-
 
             {/* Login/Register Button */}
             <div className="mt-5">
