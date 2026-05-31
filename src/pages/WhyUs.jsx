@@ -1,5 +1,26 @@
 import React from "react";
+import FeatureCard from "./FeatureCard";
+import { FaTruck } from "react-icons/fa";
+import { FaMoneyBill } from "react-icons/fa";
+import { FaHome } from "react-icons/fa";
 function WhyUs() {
+  const features = [
+    {
+      title: "ارسال سریع سفارش ها",
+      description: "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ.",
+      icon: <FaTruck/>,
+    },
+    {
+      title: "تضمین بهترین قیمت",
+      description: "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ.",
+      icon:<FaMoneyBill/>,
+    },
+    {
+      title: "پرداخت در محل",
+      description: "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ.",
+      icon:<FaHome/>,
+    },
+  ];
   return (
     <div>
       <div className="relative overflow-hidden bg-green-500 pt-20 pb-10">
@@ -11,117 +32,11 @@ function WhyUs() {
             clipPath: "polygon(0 0, 100% 0, 100% 50%, 0 0)",
           }}
         ></div>
-        <div className="mx-40">
-          <div className="w-full h-62 bg-gradient-to-br from-green-400 to-green-500 rounded-4xl">
-            <div className="mr-6 flex">
-              <h3 className="text-white text-right pt-4 text-2xl font-bold">
-                چرا از وودمارت خرید کنیم؟
-              </h3>
-              <p className="pt-6 text-white pl-6 text-md text-left text-bold mr-100">
-                لورم ایبسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاب و با
-                استفاده از طراحان گرافیک است
-              </p>
-            </div>
-            <figure>
-              <img
-                src="../images/vector.png"
-                className="mt-4 mr-6"
-                alt=""
-                width="100"
-              />
-            </figure>
-            <div className="flex justify-center items-center space-x-5">
-              <div className="w-82 h-35 rounded-3xl bg-white mt-6 mr-2 ">
-                <div
-                  className=" flex items-center h-10 w-75 bg-orange-100 mt-3
-                                rounded-lg mx-auto "
-                >
-                  <div className="w-7 h-7 mr-2 rounded-md bg-orange-300 flex justify-center items-center">
-                    <i class="bi bi-truck">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="16"
-                        height="16"
-                        fill="currentColor"
-                        class="bi bi-truck"
-                        viewBox="0 0 16 16"
-                      >
-                        <path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h9A1.5 1.5 0 0 1 12 3.5V5h1.02a1.5 1.5 0 0 1 1.17.563l1.481 1.85a1.5 1.5 0 0 1 .329.938V10.5a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 1 1-4 0H5a2 2 0 1 1-3.998-.085A1.5 1.5 0 0 1 0 10.5zm1.294 7.456A2 2 0 0 1 4.732 11h5.536a2 2 0 0 1 .732-.732V3.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .294.456M12 10a2 2 0 0 1 1.732 1h.768a.5.5 0 0 0 .5-.5V8.35a.5.5 0 0 0-.11-.312l-1.48-1.85A.5.5 0 0 0 13.02 6H12zm-9 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m9 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2" />
-                      </svg>
-                    </i>
-                  </div>
-                  <h3 className="text-lg font-bold mr-1 text-black">
-                    ارسال سریع سفارش ها
-                  </h3>
-                </div>
-                <p className="text-md text-right pr-4 mt-3">
-                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
-                  استفاده از طراحان گرافیک است.
-                </p>
-              </div>
-              <div className="w-82 h-35 rounded-3xl bg-white mt-6 mr-2">
-                <div
-                  className=" flex items-center h-10 w-75 bg-orange-100 mt-3
-                                rounded-lg mx-auto "
-                >
-                  <div className="w-7 h-7 mr-2 rounded-md bg-orange-300 flex justify-center items-center">
-                    <i class="bi bi-cash-coin">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="16"
-                        height="16"
-                        fill="currentColor"
-                        class="bi bi-cash-coin"
-                        viewBox="0 0 16 16"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          d="M11 15a4 4 0 1 0 0-8 4 4 0 0 0 0 8m5-4a5 5 0 1 1-10 0 5 5 0 0 1 10 0"
-                        />
-                        <path d="M9.438 11.944c.047.596.518 1.06 1.363 1.116v.44h.375v-.443c.875-.061 1.386-.529 1.386-1.207 0-.618-.39-.936-1.09-1.1l-.296-.07v-1.2c.376.043.614.248.671.532h.658c-.047-.575-.54-1.024-1.329-1.073V8.5h-.375v.45c-.747.073-1.255.522-1.255 1.158 0 .562.378.92 1.007 1.066l.248.061v1.272c-.384-.058-.639-.27-.696-.563h-.668zm1.36-1.354c-.369-.085-.569-.26-.569-.522 0-.294.216-.514.572-.578v1.1zm.432.746c.449.104.655.272.655.569 0 .339-.257.571-.709.614v-1.195z" />
-                        <path d="M1 0a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h4.083q.088-.517.258-1H3a2 2 0 0 0-2-2V3a2 2 0 0 0 2-2h10a2 2 0 0 0 2 2v3.528c.38.34.717.728 1 1.154V1a1 1 0 0 0-1-1z" />
-                        <path d="M9.998 5.083 10 5a2 2 0 1 0-3.132 1.65 6 6 0 0 1 3.13-1.567" />
-                      </svg>
-                    </i>
-                  </div>
-                  <h3 className="text-lg font-bold mr-1 text-black">
-                    تضمین بهترین قیمت
-                  </h3>
-                </div>
-                <p className="text-md text-right pr-4 mt-3">
-                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
-                  استفاده از طراحان گرافیک است.
-                </p>
-              </div>
-              <div className="w-82 h-35 rounded-3xl bg-white mt-6 mr-2">
-                <div
-                  className=" flex items-center h-10 w-75 bg-orange-100 mt-3
-                                rounded-lg mx-auto"
-                >
-                  <div className="w-7 h-7 mr-2 rounded-md bg-orange-300 flex justify-center items-center">
-                    <i class="bi bi-house">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="16"
-                        height="16"
-                        fill="currentColor"
-                        class="bi bi-house"
-                        viewBox="0 0 16 16"
-                      >
-                        <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z" />
-                      </svg>
-                    </i>
-                  </div>
-                  <h3 className="text-lg font-bold mr-1 text-black">
-                    پرداخت در محل
-                  </h3>
-                </div>
-                <p className="text-md text-right pr-4 mt-3">
-                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
-                  استفاده از طراحان گرافیک است.
-                </p>
-              </div>
-            </div>
+        <div className="w-full h-70 bg-gradient-to-br from-green-400 to-green-500 rounded-4xl max-w-6xl mx-auto px-2 flex items-center justify-center">
+          <div className="flex justify-center items-center gap-5">
+            {features.map((feature) => (
+              <FeatureCard key={feature.title} {...feature} />
+            ))}
           </div>
         </div>
       </div>
